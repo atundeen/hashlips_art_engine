@@ -22,6 +22,7 @@ const {
   symbol,
   seller_fee_basis_points,
   external_url,
+  collection,
   properties, 
 
   background,
@@ -135,6 +136,7 @@ const addMetadata = (_dna, _edition) => {
     edition: _edition,
     ...extraMetadata,
     attributes: attributesList,
+    collection: collection,
     properties: properties,
   };
   metadataList.push(tempMetadata);

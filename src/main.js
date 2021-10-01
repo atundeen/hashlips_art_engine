@@ -16,6 +16,14 @@ const {
   format,
   baseUri,
   description,
+
+  //Added metadata for solana
+  collectionName,
+  symbol,
+  seller_fee_basis_points,
+  external_url,
+  properties, 
+
   background,
   uniqueDnaTorrance,
   layerConfigurations,
@@ -109,15 +117,25 @@ const drawBackground = () => {
 const addMetadata = (_dna, _edition) => {
   let dateTime = Date.now();
   let tempMetadata = {
-    dna: sha1(_dna.join("")),
-    name: `#${_edition}`,
+
+    //Added metadata for solana
+    name: collectionName + " " + `#${_edition}`,
+    symbol: symbol,
+  
     description: description,
-    image: `${baseUri}/${_edition}.png`,
+
+    //Added metadata for solana
+    seller_fee_basis_points: seller_fee_basis_points,
+    
+    image: `${baseUri}image.png`,
+
+    //Added metadata for solana
+    external_url: external_url,
+
     edition: _edition,
-    date: dateTime,
     ...extraMetadata,
     attributes: attributesList,
-    compiler: "HashLips Art Engine",
+    properties: properties,
   };
   metadataList.push(tempMetadata);
   attributesList = [];
@@ -218,13 +236,14 @@ function shuffle(array) {
   return array;
 }
 
+//let i = 1 changed to i = 0 because on solana the files have to start from 0 and go up
 const startCreating = async () => {
   let layerConfigIndex = 0;
-  let editionCount = 1;
+  let editionCount = 0;
   let failedCount = 0;
   let abstractedIndexes = [];
   for (
-    let i = 1;
+    let i = 0;
     i <= layerConfigurations[layerConfigurations.length - 1].growEditionSizeTo;
     i++
   ) {
@@ -253,7 +272,7 @@ const startCreating = async () => {
         });
 
         await Promise.all(loadedElements).then((renderObjectArray) => {
-          debugLogs ? console.log("Clearing canvas") : null;
+          debugLogs ? console.log("Clearing casvas") : null;
           ctx.clearRect(0, 0, format.width, format.height);
           if (background.generate) {
             drawBackground();

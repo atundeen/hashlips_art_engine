@@ -17,13 +17,14 @@ const external_url = "https://yourwebsite.com";
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 9999,
+    growEditionSizeTo: 10,
     layersOrder: [
-      { name: "layer1" },
-      { name: "layer2" },
-      { name: "layer3" },
-      { name: "layer4" },
-      { name: "layer5" },
+      { name: "Background" },
+      { name: "Bottom lid" },
+      { name: "Eye color" },
+      { name: "Iris" },
+      { name: "Shine" },
+      { name: "Top lid" },
     ],
   },
 ];

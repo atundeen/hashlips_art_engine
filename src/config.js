@@ -56,6 +56,13 @@ const preview = {
   imageName: "preview.png",
 };
 
+// This is a optinal feature you can use to define if your NFT is a part of a collection
+const collection = {
+  name: "Collection name",
+  family: "Collection family"
+};
+
+
 //Added metadata for solana
 //Leave uri and type at the current way because they are placeholders for arweave
 const properties = {
@@ -84,6 +91,7 @@ module.exports = {
   symbol,
   seller_fee_basis_points,
   external_url,
+  collection,
   properties, 
 
   background,

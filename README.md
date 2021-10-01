@@ -1,4 +1,4 @@
-# Welcome to HashLips 👄
+# Welcome to HashLips modified Solana generator👄
 
 ![](https://github.com/HashLips/hashlips_art_engine/blob/main/logo.png)
 

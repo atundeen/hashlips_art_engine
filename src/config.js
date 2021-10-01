@@ -5,7 +5,7 @@ const isLocal = typeof process.pkg === "undefined";
 const basePath = isLocal ? process.cwd() : path.dirname(process.execPath);
 const { MODE } = require(path.join(basePath, "src/blendMode.js"));
 const description =
-  "Loot the Solana space for randomly generated items and abilities.";
+  "description of your collection";
 const baseUri = "";
 
 //Added metadata for solana

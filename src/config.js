@@ -5,26 +5,28 @@ const isLocal = typeof process.pkg === "undefined";
 const basePath = isLocal ? process.cwd() : path.dirname(process.execPath);
 const { MODE } = require(path.join(basePath, "src/blendMode.js"));
 const description =
-  "description of your collection";
+  "Vox Tha leader of a new world of finance";
 const baseUri = "";
 
 //Added metadata for solana
-const collectionName = "Name Of Collection";
-const symbol = "Symbol Of Collection";
+const collectionName = "Vox Tha Degen";
+const symbol = "vox";
 //Define how much % you want from second market sales 1000 = 10%
-const seller_fee_basis_points = 1000;
-const external_url = "https://yourwebsite.com";
+const seller_fee_basis_points = 1500;
+const external_url = "https://learnaverse.io";
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 10,
+    growEditionSizeTo: 2000,
     layersOrder: [
       { name: "Background" },
-      { name: "Bottom lid" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Top lid" },
+      { name: "Eyes" },
+      { name: "Weapon2" },
+      { name: "Weapon" },
+      { name: "Skin" },
+      { name: "Jewellery" },
+      { name: "Cloth" },
+      { name: "Hair" },
     ],
   },
 ];
@@ -40,7 +42,7 @@ const format = {
 
 const background = {
   generate: false,
-  brightness: "80%",
+  brightness: "0%",
 };
 
 const extraMetadata = {};
@@ -58,8 +60,8 @@ const preview = {
 
 // This is a optinal feature you can use to define if your NFT is a part of a collection
 const collection = {
-  name: "Collection name",
-  family: "Collection family"
+  name: "Vox Tha Degen",
+  family: "Human"
 };
 
 
@@ -75,7 +77,7 @@ const properties = {
   category: "image",
   creators: [
     {
-      "address": "Your Solana Address",
+      "address": "8pzEoPZNErLHEF14H971A9k3Miudio8B6qC1LaAnjanj",
       "share": 100
     }
   ]
